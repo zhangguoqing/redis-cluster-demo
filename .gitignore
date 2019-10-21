@@ -1,0 +1,7 @@
+*.swp
+*.so
+*.DS_Store
+
+redis.log
+redis.pid
+*/data/*
