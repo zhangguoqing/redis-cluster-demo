@@ -1,4 +1,5 @@
-port 7000
+# Replace the {700x} to 7000 or 7001 or 7002 or 7003 or 7004 or 7005
+port {700x}
 cluster-enabled yes
 cluster-config-file nodes.conf
 cluster-node-timeout 5000
@@ -9,17 +10,17 @@ timeout 0
 tcp-keepalive 300
 daemonize yes
 supervised no
-pidfile ./redis7000/redis.pid
+pidfile ./redis{700x}/redis.pid
+logfile ./redis{700x}/redis.log
+dir ./redis{700x}/data
+dbfilename dump.rdb
 loglevel notice
-logfile ./redis7000/redis.log
 databases 16
 always-show-logo yes
 save ""
 stop-writes-on-bgsave-error yes
 rdbcompression yes
 rdbchecksum yes
-dbfilename dump.rdb
-dir ./redis7000/data
 slave-serve-stale-data yes
 slave-read-only yes
 repl-diskless-sync no
